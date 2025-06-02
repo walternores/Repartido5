@@ -1,10 +1,14 @@
 @startuml
 
 class Publicacion {
+-comentario:Comentario
 -nombre:string
++publicar(comentario):void
 }
 class Usuario {
+-usuario:Usuario
 -nombre:string
++seguirUsuario(usuario):void
 }
 class Estudiante extends Usuario{
 
@@ -16,10 +20,14 @@ class Egresado extends Usuario{
 
 }
 class Grupo {
+-usuario:Usuario
 -nombre:string
++unirUsuario(usuario):void
 }
 class Comentario {
+-usuario:Usuario
 -comentario:string
++comentar(comentario):void
 }
 
 Comentario "1" -- "*" Publicacion : corresponde
