@@ -1,0 +1,31 @@
+@startuml
+
+class Publicacion {
+-nombre:string
+}
+class Usuario {
+-nombre:string
+}
+class Estudiante extends Usuario{
+-nombre:string
+}
+class Docente extends Usuario{
+-nombre:string
+}
+class Egresado extends Usuario{
+-nombre:string
+}
+class Grupo {
+-nombre:string
+}
+class Comentario {
+-comentario:string
+}
+
+Comentario "1" -- "*" Publicacion : corresponde
+Usuario "1" -- "*" Usuario : sigue
+Usuario "1" -- "*" Comentario : realiza
+Usuario "1" -- "*" Grupo : pertenece
+Usuario "1" -- "*" Publicacion : crea
+
+@enduml

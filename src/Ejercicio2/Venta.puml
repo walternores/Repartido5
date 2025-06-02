@@ -1,0 +1,39 @@
+@startuml
+
+class Cliente{
+-nombre:String
+
++agregarNombreCliente(nombre): void
++obtenerNombreCliente(): String
+}
+
+class LineaPedido{
+-cantidad:int
+-precio:double
+-producto:Producto
+
++agregarProducto(producto):void
++calcularSTotal():double
+}
+
+class Pedido{
+-cliente:Cliente
+-lineaPedido:List<LineaPedido>
+-total:double
+
++calcularTotal():double
+
+}
+
+class Producto{
+-nombre:String
+-precio:double
+-codigo:int
+
++actualizarPrecioPrducto(nombre): void
+}
+
+Cliente "1" -- "*" Pedido : realiza
+Producto "1" -- "1" LineaPedido : posee
+Pedido "1" -- "*" LineaPedido : posee
+@enduml

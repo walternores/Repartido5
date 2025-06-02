@@ -1,0 +1,33 @@
+@startuml
+class Persona {
+-nombre: String
+-edad: int
+}
+
+class Alumno extends Persona{
+-calif: int
++saludar(): void
+
+}
+
+class Curso{
+-nombre:String
+-diasDuracion:int
+}
+
+class Profesor extends Persona{
+-horasTrabajadas:int
+}
+
+Alumno "*" -- "1" Curso : Se incribe en
+Profesor "1" -- "*" Curso : Dicata
+
+/'
+"1": exactamente uno
+ "*" o "0..*": muchos
+ "0..1": opcional
+ "1..*": uno o más
+ "2..4": entre 2 y 4
+ "1,3,5": valores exactos permitidos
+'/
+@enduml

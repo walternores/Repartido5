@@ -1,0 +1,41 @@
+@startuml
+
+class Area {
+-nombre:string
++agregarNombre(nombre):void
+}
+class Medico {
+-nombre:string
++agregarNombre(nombre):void
+}
+class Pediatra extends Medico{
+-nombre:string
+}
+class Odontologo extends Medico{
+-nombre:string
+}
+class Traumatologo extends Medico{
+-nombre:string
+}
+class Turno {
+-detalle:string
++agregarDetalle(detalle):void
+}
+
+class Paciente {
+-nombre:string
++agregarNombre(nombre):void
+}
+
+class Historial {
+-descripcion:string
++agregarDescripcion(descripcion):void
+}
+
+
+
+Paciente "1" -- "1" Historial : posee
+Turno "*" -- "1" Paciente : tiene
+Turno "*" -- "1" Medico : atinde
+Area "1" -- "1" Medico : pertenece
+@enduml

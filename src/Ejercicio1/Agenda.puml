@@ -1,0 +1,27 @@
+@startuml
+
+class Agenda{
+-contacto: Contacto
+
++agregar(contacto): void
++eliminar(contacto): void
++buscar(): Contacto
+}
+
+class Contacto{
+-nombre:String
+-telefono:String
+-email:String
+-etiqueta:List<Etiqueta>
+
++agregarEtiqueta(etiqueta):void
++eliminarEtiqueta(etiqueta):void
+}
+
+class Etiqueta{
+-descripcion:String
+}
+
+Agenda "1" -- "*" Contacto : almacena
+Etiqueta "*" -- "1" Contacto : posee
+@enduml
