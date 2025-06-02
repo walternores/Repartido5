@@ -9,13 +9,13 @@ class Medico {
 +agregarNombre(nombre):void
 }
 class Pediatra extends Medico{
--nombre:string
+
 }
 class Odontologo extends Medico{
--nombre:string
+
 }
 class Traumatologo extends Medico{
--nombre:string
+
 }
 class Turno {
 -detalle:string

@@ -7,13 +7,13 @@ class Usuario {
 -nombre:string
 }
 class Estudiante extends Usuario{
--nombre:string
+
 }
 class Docente extends Usuario{
--nombre:string
+
 }
 class Egresado extends Usuario{
--nombre:string
+
 }
 class Grupo {
 -nombre:string
